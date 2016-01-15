@@ -17,7 +17,7 @@
   <link href="<c:url value="/resources/css/bootstrap.min.css"></c:url>" rel="stylesheet">
 
   <!-- Custom CSS -->
-  <link href="css/freelancer.css" rel="stylesheet">
+  <link href="<c:url value="/resources/css/freelancer.css"></c:url>" rel="stylesheet">
 
   <!-- Custom Fonts -->
   <link href="<c:url value="/resources/font-awesome/css/font-awesome.min.css"></c:url>" rel="stylesheet" type="text/css">
@@ -54,7 +54,7 @@
               <i class="fa fa-search-plus fa-3x"></i>
             </div>
           </div>
-          <img src="img/portfolio/cabin.png" class="img-responsive" alt="">
+          <img src="<c:url value="/resources/img/portfolio/cabin.png"></c:url>" class="img-responsive" alt="">
         </a>
       </div>
       <div class="col-sm-4 portfolio-item">
@@ -64,7 +64,7 @@
               <i class="fa fa-search-plus fa-3x"></i>
             </div>
           </div>
-          <img src="img/portfolio/cake.png" class="img-responsive" alt="">
+          <img src="<c:url value="/resources/img/portfolio/cake.png"></c:url>" class="img-responsive" alt="">
         </a>
       </div>
       <div class="col-sm-4 portfolio-item">
@@ -74,7 +74,7 @@
               <i class="fa fa-search-plus fa-3x"></i>
             </div>
           </div>
-          <img src="img/portfolio/circus.png" class="img-responsive" alt="">
+          <img src="<c:url value="/resources/img/portfolio/circus.png"></c:url>" class="img-responsive" alt="">
         </a>
       </div>
       <div class="col-sm-4 portfolio-item">
@@ -84,7 +84,7 @@
               <i class="fa fa-search-plus fa-3x"></i>
             </div>
           </div>
-          <img src="img/portfolio/game.png" class="img-responsive" alt="">
+          <img src="<c:url value="/resources/img/portfolio/game.png"></c:url>" class="img-responsive" alt="">
         </a>
       </div>
       <div class="col-sm-4 portfolio-item">
@@ -94,7 +94,7 @@
               <i class="fa fa-search-plus fa-3x"></i>
             </div>
           </div>
-          <img src="img/portfolio/safe.png" class="img-responsive" alt="">
+          <img src="<c:url value="/resources/img/portfolio/safe.png"></c:url>" class="img-responsive" alt="">
         </a>
       </div>
       <div class="col-sm-4 portfolio-item">
@@ -104,7 +104,7 @@
               <i class="fa fa-search-plus fa-3x"></i>
             </div>
           </div>
-          <img src="img/portfolio/submarine.png" class="img-responsive" alt="">
+          <img src="<c:url value="/resources/img/portfolio/submarine.png"></c:url>" class="img-responsive" alt="">
         </a>
       </div>
     </div>
@@ -192,7 +192,7 @@
 </section>
 
 <!-- Footer -->
-
+<tiles:insertAttribute name="footer" ></tiles:insertAttribute>
 <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
 <div class="scroll-top page-scroll visible-xs visible-sm">
   <a class="btn btn-primary" href="#page-top">
@@ -326,7 +326,7 @@
           <div class="modal-body">
             <h2>Project Title</h2>
             <hr class="star-primary">
-            <img src="img/portfolio/game.png" class="img-responsive img-centered" alt="">
+            <img src="<c:url value="/resources/img/portfolio/game.png"></c:url>" class="img-responsive img-centered" alt="">
             <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
             <ul class="list-inline item-details">
               <li>Client:
@@ -363,7 +363,7 @@
           <div class="modal-body">
             <h2>Project Title</h2>
             <hr class="star-primary">
-            <img src="img/portfolio/safe.png" class="img-responsive img-centered" alt="">
+            <img src="<c:url value="/resources/img/portfolio/safe.png"></c:url>" class="img-responsive img-centered" alt="">
             <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
             <ul class="list-inline item-details">
               <li>Client:
@@ -400,7 +400,7 @@
           <div class="modal-body">
             <h2>Project Title</h2>
             <hr class="star-primary">
-            <img src="img/portfolio/submarine.png" class="img-responsive img-centered" alt="">
+            <img src="<c:url value="/resources/img/portfolio/submarine.png"></c:url>" class="img-responsive img-centered" alt="">
             <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
             <ul class="list-inline item-details">
               <li>Client:
@@ -425,22 +425,22 @@
 </div>
 
 <!-- jQuery -->
-<script src="js/jquery.js"></script>
+<script src="<c:url value="/resources/js/jquery.js"></c:url>"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
+<script src="<c:url value="/resources/js/bootstrap.min.js"></c:url>"></script>
 
 <!-- Plugin JavaScript -->
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-<script src="js/classie.js"></script>
-<script src="js/cbpAnimatedHeader.js"></script>
+<script src="<c:url value="/resources/js/classie.js"></c:url>"></script>
+<script src="<c:url value="/resources/js/cbpAnimatedHeader.js"></c:url>"></script>
 
 <!-- Contact Form JavaScript -->
-<script src="js/jqBootstrapValidation.js"></script>
-<script src="js/contact_me.js"></script>
+<script src="<c:url value="/resources/js/jqBootstrapValidation.js"></c:url>"></script>
+<script src="<c:url value="/resources/js/contact_me.js"></c:url>"></script>
 
 <!-- Custom Theme JavaScript -->
-<script src="js/freelancer.js"></script>
+<script src="<c:url value="/resources/js/freelancer.js"></c:url>"></script>
 
 </body>
 

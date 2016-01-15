@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -8,7 +9,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
+      <a class="navbar-brand" href="#page-top">Human Resource</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -38,7 +39,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <img class="img-responsive" src="img/profile.png" alt="">
+        <img class="img-responsive" src="<c:url value="/resources/img/profile.png"></c:url>" alt="">
         <div class="intro-text">
           <span class="name">Start Bootstrap</span>
           <hr class="star-light">
