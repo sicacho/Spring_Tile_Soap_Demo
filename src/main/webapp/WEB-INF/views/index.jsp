@@ -19,7 +19,7 @@
                 </a>
             </div>
             <div class="col-sm-4 portfolio-item">
-                <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                <a href="<c:url value="/projectDetail/${projects[1].id}"></c:url>" class="portfolio-link" data-toggle="modal">
                     <div class="caption">
                         <div class="caption-content">
                             <i class="fa fa-search-plus fa-3x"></i>
@@ -29,7 +29,7 @@
                 </a>
             </div>
             <div class="col-sm-4 portfolio-item">
-                <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                <a href="<c:url value="/projectDetail/${projects[2].id}"></c:url>" class="portfolio-link" data-toggle="modal">
                     <div class="caption">
                         <div class="caption-content">
                             <i class="fa fa-search-plus fa-3x"></i>
@@ -39,7 +39,7 @@
                 </a>
             </div>
             <div class="col-sm-4 portfolio-item">
-                <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+                <a href="<c:url value="/projectDetail/${projects[3].id}"></c:url>" class="portfolio-link" data-toggle="modal">
                     <div class="caption">
                         <div class="caption-content">
                             <i class="fa fa-search-plus fa-3x"></i>
@@ -49,7 +49,7 @@
                 </a>
             </div>
             <div class="col-sm-4 portfolio-item">
-                <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+                <a href="<c:url value="/projectDetail/${projects[4].id}"></c:url>" class="portfolio-link" data-toggle="modal">
                     <div class="caption">
                         <div class="caption-content">
                             <i class="fa fa-search-plus fa-3x"></i>
@@ -59,7 +59,7 @@
                 </a>
             </div>
             <div class="col-sm-4 portfolio-item">
-                <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+                <a href="<c:url value="/projectDetail/${projects[5].id}"></c:url>" class="portfolio-link" data-toggle="modal">
                     <div class="caption">
                         <div class="caption-content">
                             <i class="fa fa-search-plus fa-3x"></i>
