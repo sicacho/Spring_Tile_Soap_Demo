@@ -7,11 +7,23 @@
                 template="/WEB-INF/views/template/template.jsp">
         <!--<put-attribute name="title" value="Home" />-->
         <put-attribute name="header" value="/WEB-INF/views/template/header.jsp" />
-        <!--<put-attribute name="body" value="" />-->
+        <put-attribute name="body" value="" />
         <put-attribute name="footer" value="/WEB-INF/views/template/footer.jsp" />
     </definition>
-    <!--<definition name="index" extends="DefaultTemplate">-->
-        <!--<put-attribute name="body"-->
-                       <!--value="/WEB-INF/views/index.jsp" />-->
-    <!--</definition>-->
+    <definition name="index" extends="DefaultTemplate">
+        <put-attribute name="body"
+                       value="/WEB-INF/views/index.jsp" />
+    </definition>
+    <definition name="contact" extends="DefaultTemplate">
+        <put-attribute name="body"
+                       value="/WEB-INF/views/contact.jsp" />
+    </definition>
+    <definition name="about" extends="DefaultTemplate">
+        <put-attribute name="body"
+                       value="/WEB-INF/views/about.jsp" />
+    </definition>
+    <definition name="freelancers" extends="DefaultTemplate">
+        <put-attribute name="body"
+                       value="/WEB-INF/views/freelancers.jsp" />
+    </definition>
 </tiles-definitions>

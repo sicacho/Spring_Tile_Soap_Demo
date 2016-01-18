@@ -9,7 +9,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#page-top">Human Resource</a>
+      <a class="navbar-brand" href="#page-top">Java Resource</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -19,13 +19,13 @@
           <a href="#page-top"></a>
         </li>
         <li class="page-scroll">
-          <a href="#portfolio">Portfolio</a>
+          <a href="/">Member</a>
         </li>
         <li class="page-scroll">
-          <a href="#about">About</a>
+          <a href="<c:url value="/about"></c:url>">About</a>
         </li>
         <li class="page-scroll">
-          <a href="#contact">Contact</a>
+          <a href="<c:url value="/contact"></c:url>">Contact</a>
         </li>
       </ul>
     </div>
@@ -41,9 +41,9 @@
       <div class="col-lg-12">
         <img class="img-responsive" src="<c:url value="/resources/img/profile.png"></c:url>" alt="">
         <div class="intro-text">
-          <span class="name">Start Bootstrap</span>
+          <span class="name">We just make a website</span>
           <hr class="star-light">
-          <span class="skills">Web Developer - Graphic Artist - User Experience Designer</span>
+          <span class="skills">beautiful design - Simple to use - User friendly</span>
         </div>
       </div>
     </div>

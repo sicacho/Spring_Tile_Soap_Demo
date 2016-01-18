@@ -65,7 +65,10 @@ hr.star-light:after {
     color: #fff;
     background-color: #18bc9c;
 }
-
+#star2:after {
+    color: #fff;
+    background-color: #4294DA;
+}
 hr.star-primary {
     border-color: #2c3e50;
 }
@@ -115,7 +118,7 @@ header .intro-text .skills {
     }
 
     header .intro-text .name {
-        font-size: 4.75em;
+        font-size: 2.75em;
     }
 
     header .intro-text .skills {

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+			http://www.springframework.org/schema/beans/spring-beans.xsd
+			http://www.springframework.org/schema/tx
+			http://www.springframework.org/schema/tx/spring-tx.xsd
+			http://www.springframework.org/schema/context
+			http://www.springframework.org/schema/context/spring-context.xsd
+			http://www.springframework.org/schema/mvc
+			http://www.springframework.org/schema/mvc/spring-mvc.xsd
+			http://www.springframework.org/schema/data/jpa
+            http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
+    <import resource="classpath*:mvc-dispatcher-servlet.xml"></import>
+    <context:component-scan base-package="com.springapp.mvc">
+        <context:exclude-filter expression="org.springframework.stereotype.Controller" type="annotation"/>
+        <context:exclude-filter expression="org.springframework.stereotype.Repository" type="annotation"/>
+    </context:component-scan>
+    <jpa:repositories base-package="com.springapp.mvc.dao"/>
+    <bean id="dataSource"
+          class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName">
+            <value>org.h2.Driver</value>
+        </property>
+        <property name="url">
+            <value>jdbc:h2:/~test</value>
+        </property>
+        <property name="username">
+            <value>admin</value>
+        </property>
+        <property name="password">
+            <value>admin</value>
+        </property>
+
+    </bean>
+    <tx:annotation-driven proxy-target-class="true" transaction-manager="transactionManager"/>
+    <tx:annotation-driven></tx:annotation-driven>
+    <bean id="entityManagerFactory"
+          class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+        <property name="persistenceXmlLocation" value="classpath*:META-INF/persistence.xml"/>
+        <property name="dataSource" ref="dataSource"/>
+        <property name="persistenceUnitName" value="PUnit"/>
+        <property name="jpaVendorAdapter">
+            <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"/>
+        </property>
+
+        <property name="jpaProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.H2Dialect</prop>
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.format_sql">false</prop>
+                <prop key="hibernate.hbm2ddl.auto">create-drop</prop>
+                <prop key="hibernate.enable_lazy_load_no_trans">true</prop>
+            </props>
+        </property>
+    </bean>
+    <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+        <property name="entityManagerFactory" ref="entityManagerFactory"/>
+    </bean>
+
+    <!--You are right - there are two different application contexts,
+    the root application context loaded up by ContextLoaderListener (at the point the ServletContext gets initialized),
+    and the Web Context (loaded up by DispatcherServlet), the root application context is the parent of the Web context.-->
+
+    <!--Now, since these are two different application contexts, they get acted on differently -
+    if you define component-scan for your services in application context,
+    then all the beans for the services get created here.-->
+
+    <!--When your Dispatcher servlet loads up it will start creating the Web Context,
+    at some point(driven by <mvc:annotation-driven/> it will create a mapping for your uri's to handler methods,
+    it will get the list of beans in the application context(which will be the web application context,
+    not the Root application Context)
+    and since you have not defined a component-scan here the controller related beans will not be found
+    and the mappings will not get created,
+    that is the reason why you have to define a component-scan in the dispatcher servlets context also.-->
+
+    <!--A good practice is to exclude the Controller related beans in the Root Application Context:-->
+
+    <!--<context:component-scan base-package="package">-->
+        <!--<context:exclude-filter expression="org.springframework.stereotype.Controller" type="annotation"/>-->
+    <!--</context:component-scan>-->
+    <!--and only controller related one's in Web Application Context:-->
+
+    <!--<context:component-scan base-package="package" use-default-filters="false">-->
+        <!--<context:include-filter expression="org.springframework.stereotype.Controller" type="annotation" />-->
+    <!--</context:component-scan>-->
+
+
+
+</beans>
