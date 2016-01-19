@@ -205,21 +205,21 @@
             <!-- By default that is to put the resulting archive into the 'deployments'
                 folder. -->
             <!-- http://maven.apache.org/guides/mini/guide-building-for-different-environments.html -->
-            <id>openshift</id>
-            <build>
-                <finalName>Project</finalName>
-                <plugins>
-                    <plugin>
-                        <artifactId>maven-war-plugin</artifactId>
-                        <version>2.1.1</version>
-                        <configuration>
-                            <outputDirectory>deployments</outputDirectory>
+            <!--<id>openshift</id>-->
+            <!--<build>-->
+                <!--<finalName>Project</finalName>-->
+                <!--<plugins>-->
+                    <!--<plugin>-->
+                        <!--<artifactId>maven-war-plugin</artifactId>-->
+                        <!--<version>2.1.1</version>-->
+                        <!--<configuration>-->
+                            <!--<outputDirectory>deployments</outputDirectory>-->
 
-                            <warName>ROOT</warName>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
+                            <!--<warName>ROOT</warName>-->
+                        <!--</configuration>-->
+                    <!--</plugin>-->
+                <!--</plugins>-->
+            <!--</build>-->
         </profile>
     </profiles>
 </project>

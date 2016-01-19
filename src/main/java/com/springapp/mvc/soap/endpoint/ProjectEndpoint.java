@@ -24,7 +24,7 @@ public class ProjectEndpoint {
     @Autowired
     private ProjectDao projectDao;
 
-    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getProjectRequest")
+    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "ProjectRequest")
     @ResponsePayload
     public ProjectRespone getProject(@RequestPayload ProjectRequest projectRequest) {
         ProjectRespone projectRespone = new ProjectRespone();
