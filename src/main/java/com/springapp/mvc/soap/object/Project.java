@@ -1,27 +1,28 @@
 
-package com.springapp.mvc.soap;
+package com.springapp.mvc.soap.object;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>Java class for Project complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType>
+ * &lt;complexType name="Project">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}long"/>
- *         &lt;element name="title" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="date" type="{http://www.w3.org/2001/XMLSchema}date"/>
  *         &lt;element name="detail" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="date" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="customer" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="service" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
@@ -33,27 +34,28 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
+@XmlType(name = "Project", namespace = "http://khang.com/testsoap/test", propOrder = {
     "id",
-    "title",
-    "detail",
+    "name",
     "date",
+    "detail",
     "customer",
     "service"
 })
-@XmlRootElement(name = "ProjectRespone")
-public class ProjectRespone {
+public class Project {
 
+    @XmlElement(namespace = "http://khang.com/testsoap/test")
     protected long id;
-    @XmlElement(required = true)
-    protected String title;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://khang.com/testsoap/test", required = true)
+    protected String name;
+    @XmlElement(namespace = "http://khang.com/testsoap/test", required = true)
+    @XmlSchemaType(name = "date")
+    protected XMLGregorianCalendar date;
+    @XmlElement(namespace = "http://khang.com/testsoap/test", required = true)
     protected String detail;
-    @XmlElement(required = true)
-    protected String date;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://khang.com/testsoap/test", required = true)
     protected String customer;
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://khang.com/testsoap/test", required = true)
     protected String service;
 
     /**
@@ -73,27 +75,51 @@ public class ProjectRespone {
     }
 
     /**
-     * Gets the value of the title property.
+     * Gets the value of the name property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getTitle() {
-        return title;
+    public String getName() {
+        return name;
     }
 
     /**
-     * Sets the value of the title property.
+     * Sets the value of the name property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setTitle(String value) {
-        this.title = value;
+    public void setName(String value) {
+        this.name = value;
+    }
+
+    /**
+     * Gets the value of the date property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getDate() {
+        return date;
+    }
+
+    /**
+     * Sets the value of the date property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setDate(XMLGregorianCalendar value) {
+        this.date = value;
     }
 
     /**
@@ -118,30 +144,6 @@ public class ProjectRespone {
      */
     public void setDetail(String value) {
         this.detail = value;
-    }
-
-    /**
-     * Gets the value of the date property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getDate() {
-        return date;
-    }
-
-    /**
-     * Sets the value of the date property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setDate(String value) {
-        this.date = value;
     }
 
     /**

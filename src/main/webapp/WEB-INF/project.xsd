@@ -1,0 +1,31 @@
+<xs:schema targetNamespace="http://khang.com/testsoap/test" xmlns:tns="http://khang.com/testsoap/test"
+           elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+<xs:element name="ProjectRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:long" name="id"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+<xs:element name="ProjectRespone">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="tns:Project" name="project"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+          <xs:complexType name="Project">
+            <xs:sequence>
+              <xs:element type="xs:long" name="id"/>
+              <xs:element type="xs:string" name="name"/>
+              <xs:element type="xs:date" name="date"/>
+              <xs:element type="xs:string" name="detail"/>
+              <xs:element type="xs:string" name="customer"/>
+              <xs:element type="xs:string" name="service"/>
+            </xs:sequence>
+          </xs:complexType>
+
+</xs:schema>
+

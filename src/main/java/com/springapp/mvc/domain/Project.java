@@ -1,9 +1,6 @@
 package com.springapp.mvc.domain;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -16,9 +13,10 @@ public class Project extends ModelBase  {
     @Column
     String name;
     @Column
+    @Temporal(TemporalType.DATE)
     Date date;
     @Column(length = 500)
-    String Detail;
+    String detail;
     @Column
     String customer;
     @Column
@@ -27,7 +25,7 @@ public class Project extends ModelBase  {
     public Project(String name, Date date, String detail, String customer, String service) {
         this.name = name;
         this.date = date;
-        Detail = detail;
+        this.detail = detail;
         this.customer = customer;
         this.service = service;
     }
@@ -52,11 +50,11 @@ public class Project extends ModelBase  {
     }
 
     public String getDetail() {
-        return Detail;
+        return detail;
     }
 
     public void setDetail(String detail) {
-        Detail = detail;
+        this.detail = detail;
     }
 
     public String getCustomer() {

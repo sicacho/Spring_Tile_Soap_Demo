@@ -32,13 +32,11 @@ public class HelloController {
 
 	@RequestMapping(value = "contact",method = RequestMethod.GET)
 	public String contact(ModelMap model) {
-		model.addAttribute("message", "Hello world!");
 		return "contact";
 	}
 
 	@RequestMapping(value = "about",method = RequestMethod.GET)
 	public String about(ModelMap model) {
-		model.addAttribute("message", "Hello world!");
 		return "about";
 	}
 

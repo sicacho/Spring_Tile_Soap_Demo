@@ -17,9 +17,11 @@
 			http://www.springframework.org/schema/data/jpa
             http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
     <import resource="classpath*:mvc-dispatcher-servlet.xml"></import>
+    <import resource="classpath*:spring-ws.xml"></import>
     <context:component-scan base-package="com.springapp.mvc">
         <context:exclude-filter expression="org.springframework.stereotype.Controller" type="annotation"/>
         <context:exclude-filter expression="org.springframework.stereotype.Repository" type="annotation"/>
+        <context:exclude-filter expression="org.springframework.ws.server.endpoint.annotation.Endpoint" type="annotation"/>
     </context:component-scan>
     <jpa:repositories base-package="com.springapp.mvc.dao"/>
     <bean id="dataSource"

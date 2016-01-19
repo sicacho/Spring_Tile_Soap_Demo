@@ -1,5 +1,5 @@
 
-package com.springapp.mvc.soap;
+package com.springapp.mvc.soap.object;
 
 import javax.xml.bind.annotation.XmlRegistry;
 
@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlRegistry;
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
- * generated in the com.springapp.mvc.soap package. 
+ * generated in the com.springapp.mvc.soap.object package.
  * <p>An ObjectFactory allows you to programatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
@@ -23,7 +23,7 @@ public class ObjectFactory {
 
 
     /**
-     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.springapp.mvc.soap
+     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.springapp.mvc.soap.object
      * 
      */
     public ObjectFactory() {
@@ -35,6 +35,22 @@ public class ObjectFactory {
      */
     public ProjectRespone createProjectRespone() {
         return new ProjectRespone();
+    }
+
+    /**
+     * Create an instance of {@link Project }
+     * 
+     */
+    public Project createProject() {
+        return new Project();
+    }
+
+    /**
+     * Create an instance of {@link ProjectRequest }
+     * 
+     */
+    public ProjectRequest createProjectRequest() {
+        return new ProjectRequest();
     }
 
 }
