@@ -9,6 +9,7 @@
 
     <properties>
         <spring.version>4.2.4.RELEASE</spring.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
@@ -181,6 +182,7 @@
                 <configuration>
                     <source>1.6</source>
                     <target>1.6</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
             </plugin>
             <plugin>
@@ -188,6 +190,7 @@
                 <configuration>
                     <includes>
                         <include>**/*Tests.java</include>
+                        <encoding>${project.build.sourceEncoding}</encoding>
                     </includes>
                 </configuration>
             </plugin>
@@ -211,6 +214,7 @@
                         <version>2.1.1</version>
                         <configuration>
                             <outputDirectory>deployments</outputDirectory>
+
                             <warName>ROOT</warName>
                         </configuration>
                     </plugin>
